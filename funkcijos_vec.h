@@ -39,13 +39,13 @@ struct mokinys {
 
 
 
-void getAverages(list<mokinys>& p);
+void getAverages(vector<mokinys>& p);
 bool compare(const mokinys& first, const mokinys& second);
-void getMedians(list<mokinys>& p);
+void getMedians(vector<mokinys>& p);
 int numOfDigits(int number);
 void generateInputFile(int nOfNd, int nOfStudents);
-void sortByCool(list<mokinys>& k, list<mokinys>& l, list<mokinys>& p);
-void readFromFile(list<mokinys>& p, string inputFileName);
-void writeEverything(list<mokinys> k, list<mokinys> l);
+void sortByCool(vector<mokinys>& k, vector<mokinys>& l, vector<mokinys>& p);
+void readFromFile(vector<mokinys>& p, string inputFileName);
+void writeEverything(vector<mokinys> k, vector<mokinys> l);
 
 #endif
