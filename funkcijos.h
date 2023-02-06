@@ -36,12 +36,45 @@ public:
     vector<double> nd;
     double vidurkis;
     double mediana;
+
+    // Default Konstruktorius
+    mokinys() = default;
+
+    // Copy Konstruktorius
+    mokinys(const mokinys &obj)
+    {
+        vardas = obj.vardas;
+        pavarde = obj.pavarde;
+        egzaminas = obj.egzaminas;
+        nd = obj.nd;
+        vidurkis = obj.vidurkis;
+        mediana = obj.mediana;
+    }
+
+    // Copy assignment operatorius
+    mokinys & operator=(const mokinys &obj)
+    {
+        if (this != &obj)
+        {
+            vardas = obj.vardas;
+            pavarde = obj.pavarde;
+            egzaminas = obj.egzaminas;
+            nd = obj.nd;
+            vidurkis = obj.vidurkis;
+            mediana = obj.mediana;
+        }
+
+        return *this;
+    }
+
+    // Destructorius
+    ~mokinys() = default;
+
     void getAverages(vector<mokinys> &p);
     void getMedians(vector<mokinys> &p);
     void sortByCool(vector<mokinys> &k, vector<mokinys> &l, vector<mokinys> &p);
     void writeEverything(vector<mokinys> k, vector<mokinys> l);
     void readFromFile(vector<mokinys> &p, string inputFileName);
-
 };
 
 
