@@ -25,22 +25,24 @@ using std::setprecision;
 using std::milli;
 using std::list;
 
-//inline ifstream infile("studentai10000.txt");
-//inline ofstream offile("res.txt");
 
-class mokinys {
+class zmogus {
 public:
     string vardas;
     string pavarde;
+};
+
+class mokinys : public zmogus {
+public:
     double egzaminas;
     vector<double> nd;
     double vidurkis;
     double mediana;
-    void getAverages(vector<mokinys> &p);
-    void getMedians(vector<mokinys> &p);
-    void sortByCool(vector<mokinys> &k, vector<mokinys> &l, vector<mokinys> &p);
+    void getAverages(vector<mokinys>& p);
+    void getMedians(vector<mokinys>& p);
+    void sortByCool(vector<mokinys>& k, vector<mokinys>& l, vector<mokinys>& p);
     void writeEverything(vector<mokinys> k, vector<mokinys> l);
-    void readFromFile(vector<mokinys> &p, string inputFileName);
+    void readFromFile(vector<mokinys>& p, string inputFileName);
 
 };
 
